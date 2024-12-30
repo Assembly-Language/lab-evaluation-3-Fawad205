@@ -16,10 +16,10 @@ asmfunc PROC p1:DWORD, p2:DWORD     ;passing paremetrs from c
         Jz odd
         Add ebx,[esi]                   ;for adding in odd numbers 
         odd:
-         add esi,4                       ; go to next elements in array
+         add esi,4                      ; go to next elements in array
     Loop Sum
 
-    mov [edi],ebx                        
+    mov [edi],ebx                       ;get final ans in p2        
     call crlf
     mov edx,offset msg
     call writestring
