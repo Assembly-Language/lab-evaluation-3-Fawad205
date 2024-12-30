@@ -12,8 +12,8 @@ asmfunc PROC p1:DWORD, p2:DWORD     ;passing paremetrs from c
    mov ebx,0
    Sum:
         mov eax, [esi]
-        test eax,1h                     ;for findin odd number in aray
-        Jz odd
+        test eax,1h                     ;for finding odd number in aray
+        Jz odd                          ;jum if zero
         Add ebx,[esi]                   ;for adding in odd numbers 
         odd:
          add esi,4                      ; go to next elements in array
@@ -21,7 +21,7 @@ asmfunc PROC p1:DWORD, p2:DWORD     ;passing paremetrs from c
 
     mov [edi],ebx                       ;get final ans in p2        
     call crlf
-    mov edx,offset msg
+    mov edx,offset msg                 ;for display masage
     call writestring
     
     ret

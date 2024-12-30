@@ -20,9 +20,8 @@ int main() {
     system("cls");
     int sum = 0;                              
     int arr[10] = {1,2,3,4,5,6,7,8,9,10}; 
-    printf("assembly proc calling from  from C! \n");
+    printf("assembly proc calling   from C! \n");
  
-    
     getch();
     asmfunc(arr,&sum); //assembly proc calling
     printf("\nSum of odd numbers: %i",sum);
