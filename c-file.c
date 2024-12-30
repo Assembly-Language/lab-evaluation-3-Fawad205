@@ -18,14 +18,14 @@ void __stdcall asmfunc(int p1, int p2);
 
 int main() {
     system("cls");
-    int sum = 0;
-    int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+    int sum = 0;                              
+    int arr[10] = {1,2,3,4,5,6,7,8,9,10}; 
     printf("assembly proc calling from  from C! \n");
  
     
     getch();
     asmfunc(arr,&sum); //assembly proc calling
-    printf("\nSum of Negative Numbers: %i",sum);
+    printf("\nSum of odd numbers: %i",sum);
     
    
    getch();
