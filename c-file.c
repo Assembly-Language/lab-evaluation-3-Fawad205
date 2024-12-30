@@ -1,6 +1,7 @@
-
 #include <stdio.h>
 
+// Write a program that takes an array of numbers (with both positive and negative values)
+//  from the user (or declare ) and displays the sum of all negative numbers from the array
 
 //extern "C" void __stdcall asmfunc(void);
 
@@ -8,7 +9,7 @@
 extern "C" {
 #endif
 
-void __stdcall asmfunc(int p1 ,int p2);
+void __stdcall asmfunc(int p1, int p2);
 
 #ifdef __cplusplus
 }
@@ -17,17 +18,20 @@ void __stdcall asmfunc(int p1 ,int p2);
 
 int main() {
     system("cls");
-    int abc;
+    int sum = 0;
+    int arr[10] = {1,2,3,4,5,6,7,8,9,10};
     printf("assembly proc calling from  from C! \n");
-getch();
-
+ 
     
-    asmfunc(3,5); //assembly proc calling
+    getch();
+    asmfunc(arr,&sum); //assembly proc calling
+    printf("\nSum of Negative Numbers: %i",sum);
+    
    
    getch();
     
     
-    printf("back to  C! \n"); // printing in c
+    printf("\nback to  C!"); // printing in c
     
   
     
